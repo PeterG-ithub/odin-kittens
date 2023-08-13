@@ -1,4 +1,9 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 name: <%= @kitten.name%> <br>
 age: <%= @kitten.age%> <br>
 cuteness: <%= @kitten.cuteness%>/10 <br>
 softness: <%= @kitten.softness%>/10 <br>
+
+<%= link_to 'Home', kittens_path%>
