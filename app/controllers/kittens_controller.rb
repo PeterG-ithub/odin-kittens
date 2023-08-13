@@ -17,7 +17,23 @@ class KittensController < ApplicationController
       flash[:notice] = "Kitten successfully added"
       redirect_to @kitten
     else
+      flash[:notice] = "Error when adding kitten"
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @kitten = Kitten.find(params[:id])
+  end
+
+  def update
+    @kitten = Kitten.find(params[:id])
+    if @kitten.update(kittens_param)
+      flash[:notice] = "Kitten successfully saved"
+      redirect_to kitten_path
+    else
+      flash[:notice] = "Error when editing Cat"
+      render :edit, status: :unprocessable_entity
     end
   end
 
