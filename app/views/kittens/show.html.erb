@@ -8,3 +8,5 @@ softness: <%= @kitten.softness%>/10 <br>
 
 <%= link_to 'Home', kittens_path%>
 <%= link_to 'Edit', edit_kitten_path%>
+<%= link_to 'Delete', kitten_path(@kitten), 
+    data: {turbo_method: :delete, turbo_confirm: "ARE YOU CERTAIN?" }%>
