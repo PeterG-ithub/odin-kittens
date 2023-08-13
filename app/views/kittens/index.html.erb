@@ -1,6 +1,6 @@
 <h1>Kittens</h1>
 <% @kittens.each do |kitten| %>
-  name: <%= kitten.name%>
+  name: <%= link_to kitten.name, kitten %>
   age: <%= kitten.age%>
   cuteness: <%= kitten.cuteness%>/10
   softness: <%= kitten.softness%>/10 <br>
