@@ -72,3 +72,4 @@ group :test do
 end
 
 gem 'random_name_generator'
+gem 'rest-client'
